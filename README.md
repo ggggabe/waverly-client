@@ -1,2 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Waverly
 
+Wavery is a design studio specializing in experiences for musicians and other creatives
