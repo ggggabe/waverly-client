@@ -1,0 +1,40 @@
+#wave {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 30vh;
+  }
+
+.landing-page {
+  height:100vh;
+  display:flex;
+  flex-flow:column;
+  justify-content: center;
+}
+
+.logo {
+  width: 100px;
+}
+
+.content {
+  width: 70vw;
+  max-width: 960px;
+  margin-left: 30vw;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5%;
+  box-sizing: border-box;
+}
+
+.content p {
+  font: normal normal 36px/1.5 "Lifted";
+  max-width: 600px;
+}
+
+.content a {
+  font: normal normal 18px/1.5 "Lifted";
+  text-decoration: underline;
+  color: white;
+  letter-spacing: .3px;
+}
