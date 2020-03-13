@@ -2,10 +2,10 @@
 
 # dependencies
 /node_modules
+/.vs_code
 /.pnp
 .pnp.js
 .env
-.vs_code
 
 # testing
 /coverage
