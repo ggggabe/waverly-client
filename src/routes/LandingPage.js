@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react'
 import SimplexNoise from 'simplex-noise'
-import './LandingPage.css'
+import './LandingPage.scss'
 
 export const LandingPageContent = () => {
   return (
