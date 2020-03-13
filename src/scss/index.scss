@@ -1,14 +1,35 @@
-@import './fonts.scss';
+@import "./fonts.scss";
 
 body {
   background: #656a73;
   color: #c0c7c0;
   height: 100vh;
   width: 100vw;
-  overflow:hidden;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   margin: 0;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lifted";
+  .debug-outline {
+    border: 1px dashed pink;
+  }
+  .container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+
+    &.centered {
+      justify-content: center;
+      align-items: center;
+    }
+
+    .debug-outline {
+      border-color: khaki;
+    }
+  }
 }
 
-@import './media-queries.scss';
+@import "./media-queries.scss";

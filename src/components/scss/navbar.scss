@@ -3,25 +3,27 @@
   color: hsl(0, 0%, 100%);
   list-style: none;
   display: flex;
+  flex-flow: row-reverse;
+  justify-content: flex-end;
 
   font-family: "Lifted";
-  height: 30vh;
+  height: 40px;
   width: 100vw;
   text-decoration: none;
 
-  position: absolute;
+  position: fixed;
   bottom: 0;
+  left: 0;
 
   padding: 0;
 
-  li {
+  .navitem {
     // border: blue 1px solid;
     align-self: center;
-    justify-content: left;
     height: 22px;
     overflow: hidden;
     display: flex;
-    width: 50vw;
+    padding: 20px;
 
     a {
       text-decoration: none;
