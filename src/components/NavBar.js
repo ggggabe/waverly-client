@@ -13,7 +13,7 @@ const Routing = ({ routes }) => (
 )
 
 const RouteList = ({ routes }) => (
-  <ul>
+  <ul className='navbar'>
     {routes.map(({ path, label }, key) => (
       <li key={key}><Link to={path}>{label}</Link></li>
     ))}
@@ -25,7 +25,7 @@ export const NavBar = ({ routes }) => {
     routes
   }
   return <div>
-    <nav>
+    <nav >
       <RouteList {...props}></RouteList>
       <Routing {...props}></Routing>
     </nav>

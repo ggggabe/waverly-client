@@ -1,9 +1,37 @@
 .navbar {
-  color: white;
-  background-color: pink;
-  display: block;
-  height: 200px;
-  width: 200px;
-  text-decoration:none;
-  font-family: monospace;
- }
+  // border: pink 1px solid;
+  color: hsl(0, 0%, 100%);
+  list-style: none;
+  display: flex;
+
+  font-family: "Lifted";
+  height: 30vh;
+  width: 100vw;
+  text-decoration: none;
+
+  position: absolute;
+  bottom: 0;
+
+  padding: 0;
+
+  li {
+    // border: blue 1px solid;
+    align-self: center;
+    justify-content: left;
+    height: 22px;
+    overflow: hidden;
+    display: flex;
+    width: 50vw;
+
+    a {
+      text-decoration: none;
+      color: #c0c7c0;
+      width: 100%;
+      text-align: right;
+      // background-color: #656a73;
+      font: normal normal 26px/1.5 "Lifted";
+      text-transform: uppercase;
+      align-self: center;
+    }
+  }
+}
