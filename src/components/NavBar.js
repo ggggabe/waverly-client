@@ -4,7 +4,6 @@ import {
   Switch,
   Route
 } from 'react-router-dom'
-import { PropsLog } from './HUD'
 import './scss/navbar.scss'
 
 const Routing = ({ routes }) => (
@@ -16,7 +15,7 @@ const Routing = ({ routes }) => (
 const RouteList = ({ routes }) => (
   <ul className='navbar'>
     {routes.map(({ path, label }, key) => (
-      <li className='navitem' key={key}><Link to={path}>{label}</Link>
+      <li className='navitem hover-text' key={key}><Link to={path}>{label}</Link>
       </li>
     ))}
   </ul>

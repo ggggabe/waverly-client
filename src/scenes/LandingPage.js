@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Wave } from '../components'
 import './scss/LandingPage.scss'
 
@@ -14,6 +14,9 @@ export const AboutWaverly = () => {
 
 
 export const LandingPage = () => {
+  useEffect(() => {
+    document.title = 'Waverly - About'
+  })
   return (
     <div className="landing-page container">
       <AboutWaverly />
