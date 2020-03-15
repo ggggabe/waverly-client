@@ -1,4 +1,10 @@
-$header-color: #78c0cc;
+$header-color: rgb(255, 223, 42);
+
+$border-color: rgb(17, 11, 0);
+$color: rgb(255, 223, 42);
+$padding: 60px;
+$content-padding: calc(100% - 60px);
+
 /* fonts */
 .window {
   color: #385680;
@@ -14,20 +20,28 @@ $header-color: #78c0cc;
 /* colors */
 .window {
   &.container {
-    background-color: rgb(227, 230, 238);
+    border: 3px solid $border-color;
   }
+
   .header {
+    background-color: $header-color;
+
+    border-bottom: 3px solid $border-color;
     .menu {
-      color: adjust-color($header-color, $lightness: -30%, $alpha: -0.4);
+      color: adjust-color($border-color, $lightness: -30%, $alpha: -0.4);
 
       div:hover {
-        color: adjust-color($header-color, $lightness: -60%);
+        color: adjust-color($border-color, $lightness: -60%);
       }
     }
 
     .title {
-      color: darken($header-color, 40);
+      color: darken($border-color, 40);
     }
+  }
+
+  .content {
+    background-color: rgb(27, 27, 56);
   }
 }
 
@@ -35,10 +49,14 @@ $header-color: #78c0cc;
 .window {
   display: flex;
   flex-flow: column;
+  border-radius: 10px;
+  overflow: hidden;
 
   .header {
     display: flex;
     justify-content: space-between;
+    box-shadow: 0 4px 4px -5px gray;
+
     .menu {
       display: flex;
     }
@@ -46,13 +64,16 @@ $header-color: #78c0cc;
       margin: 0;
       flex: 1;
     }
-    .content {
-      display: block;
-    }
+
     .controls {
       display: flex;
       justify-content: flex-end;
     }
+  }
+
+  .content {
+    display: block;
+    overflow: hidden;
   }
 }
 
@@ -61,14 +82,12 @@ $header-color: #78c0cc;
   &.container {
     height: 80vh;
     width: 80vw;
-    border-radius: 10px;
+    box-sizing: border-box;
   }
 
   .header {
     height: 60px;
     width: 100%;
-    background-color: $header-color;
-    border-radius: 10px 10px 0 0;
     line-height: 60px;
 
     .menu {
@@ -91,6 +110,9 @@ $header-color: #78c0cc;
 
     .title {
       margin: 0;
+      flex: 1;
+      padding-left: 20px;
+      text-align: left;
     }
 
     .controls {
@@ -100,6 +122,12 @@ $header-color: #78c0cc;
         margin: 0 10px;
       }
     }
+  }
+
+  .content {
+    width: $content-padding;
+    height: $content-padding;
+    padding: 30px;
   }
 }
 

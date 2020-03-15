@@ -7,3 +7,7 @@ export const useDraggable = Component => {
     </div>
   ))
 }
+
+export const useSwitchContainer = (FromComponent, ToComponent, condition) => props => {
+  return condition(props) ? <ToComponent {...props} /> : <FromComponent {...props} />
+}
