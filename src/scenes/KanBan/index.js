@@ -17,8 +17,8 @@ export const kanbanStub = {
 }
 
 const NoBoards = props => (
-  <div className="no-boards">
-    <h2> Seems like you have no Boards</h2>
+  <div className="no-boards fill-width centered flex-column">
+    <h2>I bet you have shit to do</h2>
     <div className="hover-text">
       <span>+ Add a board</span>
     </div>
@@ -51,7 +51,7 @@ const KanBanSwitchContainer = useSwitchContainer(NoBoards, Boards, ({ boards }) 
 export const KanBanScene = ({ boards }) => {
   console.log({ boards })
   return (
-    <div className="kanban container overflow-y-scroll">
+    <div className="kanban fill-container centered container overflow-y-scroll">
       <KanBanSwitchContainer boards={boards} />
     </div>
   )

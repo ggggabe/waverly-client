@@ -25,10 +25,10 @@ export const NavBar = ({ routes }) => {
   const props = {
     routes
   }
-  return <div>
-    <nav >
+  return <div className='fullscreen centered'>
+    <nav className=''>
       <RouteList {...props}></RouteList>
-      <Routing {...props}></Routing>
     </nav>
+    <Routing {...props}></Routing>
   </div>
 }

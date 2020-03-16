@@ -22,11 +22,6 @@ body {
 .container {
   display: flex;
 
-  &.centered {
-    justify-content: center;
-    align-items: center;
-  }
-
   .debug-outline {
     border-color: khaki;
   }
@@ -64,4 +59,38 @@ body {
     }
   }
 }
+
+.fullscreen {
+  height: 100vh;
+  width: 100vw;
+}
+
+.fill-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.fill-width {
+  width: 100%;
+  display: flex;
+}
+
+.fill-height {
+  height: 100%;
+  display: flex;
+}
+
+div {
+  display: flex;
+}
+.centered {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
 @import "./media-queries.scss";

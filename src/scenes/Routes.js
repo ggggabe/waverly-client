@@ -3,11 +3,19 @@ import {
   BrowserRouter as Router
 } from 'react-router-dom'
 import { NavBar } from '../components'
-import { LandingPage, SandBoxContainer } from '.'
+import { SandBoxContainer } from '.'
+import { KanBanScene } from './KanBan'
+import { LandingPage } from './LandingPage'
+
 
 export const Routes = () => {
   const props = {
     routes: [
+      {
+        path: '/todo',
+        label: 'projects',
+        component: KanBanScene
+      },
       { path: '/sandbox', label: 'sandbox', component: SandBoxContainer },
       { path: '/', label: 'home', component: LandingPage }
     ]
