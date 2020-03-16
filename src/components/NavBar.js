@@ -14,8 +14,8 @@ const Routing = ({ routes }) => (
 
 const RouteList = ({ routes }) => (
   <ul className='navbar'>
-    {routes.map(({ path, label }, key) => (
-      <li className='navitem hover-text' key={key}><Link to={path}>{label}</Link>
+    {routes.map(({ path, label, style }, key) => (
+      <li className='navitem hover-text' key={key}><Link to={path}><p style={style}>{label}</p></Link>
       </li>
     ))}
   </ul>

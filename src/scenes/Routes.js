@@ -1,6 +1,7 @@
 import React from 'react'
 import {
-  BrowserRouter as Router
+  BrowserRouter as Router,
+  Redirect
 } from 'react-router-dom'
 import { NavBar } from '../components'
 import { SandBoxContainer } from '.'
@@ -12,18 +13,27 @@ export const Routes = () => {
   const props = {
     routes: [
       {
-        path: '/todo',
-        label: 'projects',
+        path: '/nicetodo',
+        label: 'Nice To Do',
+        style: { width: 100 },
         component: KanBanScene
       },
-      { path: '/sandbox', label: 'sandbox', component: SandBoxContainer },
-      { path: '/', label: 'home', component: LandingPage }
+      // { path: '/sandbox', label: 'sandbox', component: SandBoxContainer },
+      {
+        path: '/waverly',
+
+        label: 'Waverly Works',
+        style: { width: 140 },
+        component: LandingPage
+      }
     ]
   }
 
   return (
     <Router className="router">
       <NavBar {...props}></NavBar>
-    </Router>
+
+
+    </Router >
   )
 }

@@ -17,12 +17,23 @@ export const kanbanStub = {
 }
 
 const NoBoards = props => (
-  <div className="no-boards fill-width centered flex-column">
-    <h2>I bet you have shit to do</h2>
-    <div className="hover-text">
-      <span>+ Add a board</span>
-    </div>
-  </div >
+  <div className="no-boards fill-width centered no-text-select">
+    <div className="one-third-width flex-column slight-pad" >
+      {/* <h2 style={{
+        margin: '1rem 0'
+      }}>Hey, </h2> */}
+      <h2>Welcome to the project planner. </h2>
+      <h2 style={{
+      }}>Do you have things to do?</h2>
+      <div className="hover-text body" style={{
+        margin: '2rem 0',
+        height: '100px'
+
+      }} >
+        <span>Start something</span>
+      </div>
+    </div >
+  </div>
 )
 
 const Card = () => (
@@ -30,7 +41,6 @@ const Card = () => (
 )
 
 const Board = (props) => {
-
   return (
     <Window className={`board`} title={props.title} scene={Card} sceneProps={props} />
   )
@@ -49,7 +59,6 @@ const Boards = ({ boards }) => {
 const KanBanSwitchContainer = useSwitchContainer(NoBoards, Boards, ({ boards }) => boards && boards.length > 0)
 
 export const KanBanScene = ({ boards }) => {
-  console.log({ boards })
   return (
     <div className="kanban fill-container centered container overflow-y-scroll">
       <KanBanSwitchContainer boards={boards} />
